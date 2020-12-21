@@ -1,0 +1,78 @@
+{
+  "name": "mwtourney",
+  "version": "0.0.0",
+  "description": "Layout for the Most Wanted tournament",
+  "homepage": "",
+  "author": {
+    "name": "hoxi",
+    "email": " ",
+    "url": ""
+  },
+  "files": [
+    "dashboard",
+    "graphics",
+    "extension.js",
+    "extension"
+  ],
+  "keywords": [
+    "",
+    "nodecg-bundle"
+  ],
+  "nodecg": {
+    "compatibleRange": "^1.1.1",
+    "dashboardPanels": [
+      {
+        "name": "player1",
+        "title": "Player 1 Info",
+        "width": 2,
+        "file": "player1.html",
+        "headerColor": "#525F78"
+      },
+      {
+        "name": "player2",
+        "title": "Player 2 Info",
+        "width": 2,
+        "file": "player2.html",
+        "headerColor": "#525F78"
+      },
+      {
+        "name": "commentators",
+        "title": "Commentators",
+        "width": 4,
+        "file": "commentators.html",
+        "headerColor": "#525F78"
+      },
+      {
+        "name": "stageinfo",
+        "title": "Tournament Stage Info",
+        "width": 4,
+        "file": "stageinfo.html",
+        "headerColor": "#525F78"
+      }
+    ],
+    "graphics": [
+      {
+        "file": "main.html",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "file": "countdown.html",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "file": "matchup.html",
+        "width": 1920,
+        "height": 1080
+      }
+    ]
+  },
+  "repository": "https://github.com/nodecg/nodecg.git",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "get-json": "^1.0.1",
+    "image-downloader": "^4.0.1",
+    "request": "^2.88.2"
+  }
+}
