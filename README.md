@@ -1,7 +1,7 @@
 # mwtourney-layout
 NodeCG layouts used during GTA Speedrunning Community's 2020 GTA IV Most Wanted Tournament
 
-*This is a bundle for NodeCG; if you do not understand what that is, I advise you read their website first for more information.*
+*This is a bundle for NodeCG 1.x; if you do not understand what that is, I advise you read their website first for more information.*
 
 # Installation
 
