@@ -6,7 +6,7 @@ NodeCG layouts used during GTA Speedrunning Community's 2025 GTA IV Most Wanted 
 
 You will need [Node.js](https://nodejs.org/en/) (22.x LTS tested) and [git](https://git-scm.com/) installed to install these layouts.
 
-Clone the repo **(IMPORTANT! Make sure to clone the submodules too!)**:
+Clone the repo:
 ```sh
 git clone https://github.com/hoXyy/mwtourney-layout.git
 ```
