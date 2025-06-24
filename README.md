@@ -1,12 +1,29 @@
 # mwtourney-layout
-NodeCG layouts used during GTA Speedrunning Community's 2020 GTA IV Most Wanted Tournament
+NodeCG layouts used during GTA Speedrunning Community's 2025 GTA IV Most Wanted Tournament
 
-*This is a bundle for NodeCG 1.x; if you do not understand what that is, I advise you read their website first for more information.*
 
 # Installation
 
-You will need [Node.js](https://nodejs.org/en/) (10.x LTS tested) and git installed to install NodeCG, then see the [NodeCG documentation](https://www.nodecg.dev/docs/what-is-nodecg) on how to install that. I also suggest installing `nodecg-cli`; information on that is also on the documentation just linked.
+You will need [Node.js](https://nodejs.org/en/) (22.x LTS tested) and [git](https://git-scm.com/) installed to install these layouts.
 
-* `nodecg install hoXyy/mwtourney-layout` to install the latest version of these layouts.
+Clone the repo **(IMPORTANT! Make sure to clone the submodules too!)**:
+```sh
+git clone https://github.com/hoXyy/mwtourney-layout.git
+```
 
+Install dependencies:
+```sh
+cd mwtourney-layout
+npm install
+```
+
+And build the layouts:
+```sh
+npm run build
+```
+## Usage
+To run the layouts, run this command in the bundle's directory:
+```sh
+npm start
+```
 

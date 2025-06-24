@@ -1,53 +1,92 @@
 {
-  "name": "mwtourney",
-  "version": "0.0.0",
-  "description": "Layout for the Most Wanted tournament",
-  "homepage": "",
-  "author": {
-    "name": "hoxi",
-    "email": " ",
-    "url": ""
+  "name": "mwtourney-layout",
+  "version": "1.0.0",
+  "scripts": {
+    "autofix": "run-s autofix:*",
+    "autofix:browser": "eslint --fix --ext .ts,.tsx src/browser",
+    "autofix:extension": "eslint --fix --ext .ts src/extension && eslint --fix --ext .d.ts src/nodecg",
+    "build": "run-s clean build:*",
+    "build:browser": "rsbuild build",
+    "build:extension": "tsc -b tsconfig.extension.json",
+    "clean": "trash node_modules/.cache && trash shared/dist && trash dashboard && trash graphics && trash extension",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "prettify": "prettier --write src/browser src/extension",
+    "prebuild": "npm run clean",
+    "schema-types": "nodecg schema-types -o src/types/generated",
+    "start": "nodecg start",
+    "watch": "run-p watch:*",
+    "watch:browser": "rsbuild dev",
+    "watch:extension": "tsc -b tsconfig.extension.json -w --preserveWatchOutput"
   },
-  "files": [
-    "dashboard",
-    "graphics",
-    "extension.js",
-    "extension"
-  ],
-  "keywords": [
-    "",
-    "nodecg-bundle"
-  ],
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@fontsource/roboto": "^5.0.3",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.17.1",
+    "@nodecg/react-hooks": "^1.0.3",
+    "axios": "^1.10.0",
+    "livesplit-core": "^0.10.2",
+    "lodash": "^4.17.21",
+    "nodecg": "^2.6.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "6.0.0-rc.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.12.0",
+    "@rsbuild/core": "^1.3.22",
+    "@rsbuild/plugin-react": "^1.3.2",
+    "@rsbuild/plugin-type-check": "^1.2.3",
+    "@types/eslint__js": "^8.42.3",
+    "@types/lodash": "^4.14.195",
+    "@types/react": "^18.0.37",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^8.8.0",
+    "@typescript-eslint/parser": "^8.8.0",
+    "@vitejs/plugin-react": "^4.6.0",
+    "del": "^7.0.0",
+    "del-cli": "^5.0.0",
+    "eslint": "^9.12.0",
+    "eslint-plugin-react": "^7.37.1",
+    "eslint-plugin-react-hooks": "^5.1.0-rc-eb3ad065-20240822",
+    "eslint-plugin-react-refresh": "^0.4.12",
+    "globby": "^13.2.2",
+    "minimatch": "^10.0.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.8",
+    "rollup": "^4.44.0",
+    "trash-cli": "^5.0.0",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.6.2",
+    "typescript-eslint": "^8.8.0"
+  },
   "nodecg": {
-    "compatibleRange": "^1.1.1",
+    "compatibleRange": "^1.8.1 || ^2.0.0",
     "dashboardPanels": [
       {
-        "name": "player1",
-        "title": "Player 1 Info",
-        "width": 2,
-        "file": "player1.html",
-        "headerColor": "#525F78"
-      },
-      {
-        "name": "player2",
-        "title": "Player 2 Info",
-        "width": 2,
-        "file": "player2.html",
-        "headerColor": "#525F78"
-      },
-      {
+        "file": "commentators.html",
         "name": "commentators",
         "title": "Commentators",
-        "width": 4,
-        "file": "commentators.html",
-        "headerColor": "#525F78"
+        "width": 3
       },
       {
-        "name": "stageinfo",
-        "title": "Tournament Stage Info",
-        "width": 4,
-        "file": "stageinfo.html",
-        "headerColor": "#525F78"
+        "file": "match-info.html",
+        "name": "match-info",
+        "title": "Match Info",
+        "width": 3
+      },
+      {
+        "file": "score.html",
+        "name": "score",
+        "title": "Score",
+        "width": 3
+      },
+      {
+        "file": "timer.html",
+        "name": "timer",
+        "title": "Timer",
+        "width": 3
       }
     ],
     "graphics": [
@@ -55,24 +94,7 @@
         "file": "main.html",
         "width": 1920,
         "height": 1080
-      },
-      {
-        "file": "countdown.html",
-        "width": 1920,
-        "height": 1080
-      },
-      {
-        "file": "matchup.html",
-        "width": 1920,
-        "height": 1080
       }
     ]
-  },
-  "repository": "https://github.com/nodecg/nodecg.git",
-  "license": "GPL-3.0",
-  "dependencies": {
-    "get-json": "^1.0.1",
-    "image-downloader": "^4.0.1",
-    "request": "^2.88.2"
   }
 }

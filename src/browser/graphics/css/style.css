@@ -1,0 +1,104 @@
+@import url('./fonts/font.css');
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: white;
+  font-weight: bold;
+  font-family: 'HelveticaNeue Medium';
+}
+
+#backgrounds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+#backgrounds .bg {
+  position: absolute;
+}
+
+#score {
+  position: fixed;
+  top: 100px;
+  left: 520px;
+  width: 880px;
+  height: 40px;
+  text-align: center;
+  font-size: 34px;
+}
+
+#player1 {
+  position: fixed;
+  left: 19px;
+  bottom: 19px;
+}
+
+#player2 {
+  position: fixed;
+  right: 19px;
+  bottom: 19px;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 395px;
+  height: 295px;
+  font-size: 36px;
+}
+
+#commentators {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  left: 430px;
+  bottom: 19px;
+  font-size: 30px;
+}
+
+#tournament-stage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  right: 430px;
+  bottom: 19px;
+  font-size: 30px;
+}
+
+#timer {
+  position: fixed;
+  bottom: 232.5px;
+  left: 750px;
+  width: 420px;
+  height: 80px;
+  text-align: center;
+  font-size: 64px;
+  transition: color 1s;
+}
+
+.stopped,
+.paused {
+  color: gray;
+}
+
+.running {
+  color: white;
+}
+
+.finished {
+  color: #3256a8;
+}
